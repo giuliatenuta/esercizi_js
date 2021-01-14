@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		let a=0
+		while(a == 0){
+			a = prompt("Inserisci un numero: ")
+		}
+		let b = prompt("Inserisci un numero: ")
+		let c = prompt("Inserisci un numero: ")
+		let delta = Number(b)**2 -4*Number(a)*Number(c)
+		alert("Delta: " + delta)
+		if(delta<0) {
+			alert("L'equazione non ha soluzioni")
+		} else {
+			let soluzione_1 = ((-b + Math.sqrt(delta))/2*a)
+			let soluzione_2 = ((-b - Math.sqrt(delta))/2*a)
+			soluzione_1 === soluzione_2 ? alert("Soluzioni uguali") : alert("Soluzioni distinte")
+			alert("Soluzione 1: " + soluzione_1)
+			alert("Soluzione 2: " + soluzione_2)
+		}
+
+	</script>
+</body>
+</html>
