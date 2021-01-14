@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script>
+		"use strict";
+		let k = 0, m
+		let array = []
+		let n = prompt("Inserisci numero dei valori:")
+		while(k != n) {
+			m = prompt("inserisci valore: ")
+			if (m >= -50 && m <= 50) {
+				k++
+				array.push(Number(m))
+			}
+		}
+		alert(array)
+
+		let max = 0 
+        for(k = 0; k < n; k++){
+            if(array[k] >= max){
+                max = array[k]
+            }
+        }
+        alert("Numero massimo: "+ max)
+
+        let media = array.reduce((acc, e) => {
+        	return acc+e
+        }, 0)
+        media/= n
+        alert("Media: " + media)
+        let somma = array.reduce((acc, e) => {
+            return  e < 0 ? acc+e : acc
+        }, 0)
+        alert("Somma numeri negativi: "+ somma)
+	</script>
+</body>
+</html>
